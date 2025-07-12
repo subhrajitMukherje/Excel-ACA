@@ -29,12 +29,12 @@ export default function Header({ isMenuOpen, setIsMenuOpen }: HeaderProps) {
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+            <div className="ml-10 flex items-baseline space-x-4 lg:space-x-8">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                  className="text-gray-700 hover:text-blue-600 px-2 lg:px-3 py-2 rounded-md text-sm font-medium transition-colors"
                 >
                   {item.name}
                 </a>
@@ -43,19 +43,21 @@ export default function Header({ isMenuOpen, setIsMenuOpen }: HeaderProps) {
           </div>
 
           {/* Call to Action */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-2 lg:space-x-4">
             <a
               href="tel:+911234567890"
-              className="flex items-center text-blue-600 hover:text-blue-800 font-semibold"
+              className="flex items-center text-blue-600 hover:text-blue-800 font-semibold text-sm lg:text-base"
             >
               <Phone className="h-4 w-4 mr-1" />
-              Call Now
+              <span className="hidden lg:inline">Call Now</span>
+              <span className="lg:hidden">Call</span>
             </a>
             <a
               href="#demo-form"
-              className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors"
+              className="bg-blue-600 text-white px-3 lg:px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors"
             >
-              Free Demo
+              <span className="hidden lg:inline">Free Demo</span>
+              <span className="lg:hidden">Demo</span>
             </a>
           </div>
 

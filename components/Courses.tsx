@@ -82,7 +82,7 @@ export default function Courses() {
           {courses.map((course, index) => (
             <div
               key={index}
-              className={`${course.color} border-2 rounded-xl p-6 hover:shadow-xl transition-all duration-300 hover:scale-105`}
+              className={`${course.color} border-2 rounded-xl p-4 sm:p-6 hover:shadow-xl transition-all duration-300 hover:scale-105`}
             >
               <div className="flex items-center justify-between mb-4">
                 <div className="text-3xl">{course.icon}</div>
@@ -91,33 +91,33 @@ export default function Courses() {
                 </div>
               </div>
               
-              <h3 className="text-xl font-bold text-gray-900 mb-3">{course.category}</h3>
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3">{course.category}</h3>
               
               <div className="space-y-2 mb-4">
                 {course.exams.map((exam, examIndex) => (
                   <span
                     key={examIndex}
-                    className="inline-block bg-white px-3 py-1 rounded-full text-sm font-medium text-gray-700 mr-2 mb-2"
+                    className="inline-block bg-white px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium text-gray-700 mr-1 sm:mr-2 mb-2"
                   >
                     {exam}
                   </span>
                 ))}
               </div>
 
-              <div className="grid grid-cols-3 gap-4 pt-4 border-t border-gray-200">
+              <div className="grid grid-cols-3 gap-2 sm:gap-4 pt-4 border-t border-gray-200">
                 <div className="text-center">
                   <Clock className="h-5 w-5 text-gray-500 mx-auto mb-1" />
-                  <div className="text-sm font-semibold text-gray-900">{course.duration}</div>
+                  <div className="text-xs sm:text-sm font-semibold text-gray-900">{course.duration}</div>
                   <div className="text-xs text-gray-600">Duration</div>
                 </div>
                 <div className="text-center">
                   <Users className="h-5 w-5 text-gray-500 mx-auto mb-1" />
-                  <div className="text-sm font-semibold text-gray-900">{course.students}</div>
+                  <div className="text-xs sm:text-sm font-semibold text-gray-900">{course.students}</div>
                   <div className="text-xs text-gray-600">Students</div>
                 </div>
                 <div className="text-center">
                   <Award className="h-5 w-5 text-gray-500 mx-auto mb-1" />
-                  <div className="text-sm font-semibold text-gray-900">{course.successRate}</div>
+                  <div className="text-xs sm:text-sm font-semibold text-gray-900">{course.successRate}</div>
                   <div className="text-xs text-gray-600">Success</div>
                 </div>
               </div>
