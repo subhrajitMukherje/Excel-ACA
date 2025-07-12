@@ -67,17 +67,17 @@ export default function DemoForm() {
           <div className="max-w-2xl mx-auto text-center">
             <div className="bg-white rounded-2xl p-8 shadow-xl">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <BookOpen className="h-8 w-8 text-green-600" />
+                <Mail className="h-8 w-8 text-green-600" />
               </div>
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                Thank You for Registering!
+                Mail Sent to Our Team!
               </h2>
               <p className="text-gray-600 mb-6">
-                We've received your request for a free demo class. Our team will contact you within 24 hours to schedule your session.
+                Your demo class request has been successfully sent to our team. We will contact you within 24 hours to schedule your free demo session.
               </p>
               <div className="bg-green-50 border border-green-200 rounded-lg p-4">
                 <p className="text-green-800 font-semibold">
-                  Check your email for confirmation details and demo class link.
+                  Our team has received your request and will reach out to you soon with demo class details.
                 </p>
               </div>
             </div>
